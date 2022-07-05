@@ -36,7 +36,7 @@ strong {
 }
 
 .container-esquerdo {
-  width: 400px;
+  max-width: 400px;
 }
 
 .lado-esquerdo h2:first-child {
@@ -78,6 +78,7 @@ strong {
 
 .produto h2 {
   margin-top: 1rem;
+  text-align: center;
 }
 
 .lado-esquerdo input,
@@ -156,4 +157,53 @@ footer {
 .lado-direito {
   background-color: #404eed;
   width: 50%;
+}
+
+@media (max-width: 1100px) {
+  header {
+    justify-content: center;
+  }
+
+  .lado-direito {
+    display: none;
+  }
+
+  .lado-esquerdo {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .container-footer {
+    margin-bottom: 1.7rem;
+    text-align: center;
+  }
+
+  .ultimos-pedidos {
+    flex-direction: column;
+    gap: 1.7rem 0;
+  }
+}
+
+@media (max-width: 422px) {
+  .lado-esquerdo img {
+    max-width: 50%;
+  }
+
+  .escolher-modelo,
+  .escolher-tecido,
+  .escolher-gola {
+    gap: 0 3rem;
+  }
+
+  .fundo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .lado-esquerdo input {
+    width: 94%;
+  }
+  .lado-esquerdo button {
+    width: 100%;
+  }
 }
