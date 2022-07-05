@@ -1,0 +1,159 @@
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #404eed;
+  height: 89px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  margin-left: 8rem;
+}
+main {
+  display: flex;
+  color: #232323;
+}
+
+strong {
+  font-weight: 700;
+}
+.lado-esquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+.container-esquerdo {
+  width: 400px;
+}
+
+.lado-esquerdo h2:first-child {
+  margin-top: 3.8rem;
+  margin-bottom: 1rem;
+}
+
+.lado-esquerdo h2:nth-of-type(2),
+.lado-esquerdo h2:nth-of-type(3),
+.lado-esquerdo h2:nth-of-type(4) {
+  margin-top: 3.1rem;
+  margin-bottom: 1rem;
+}
+
+.escolher-modelo,
+.escolher-tecido,
+.escolher-gola {
+  display: flex;
+  justify-content: center;
+  gap: 0 4.1rem;
+}
+
+.fundo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 0.5px solid #c4c4c4;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.produto h2 {
+  margin-top: 1rem;
+}
+
+.lado-esquerdo input,
+.lado-esquerdo button {
+  height: 40px;
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.lado-esquerdo input {
+  width: 383px;
+  padding-left: 1.5rem;
+  background-color: #f2f2f2;
+  font-size: 1.4rem;
+}
+
+.lado-esquerdo button {
+  width: 398px;
+  background-color: #c4c4c4;
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+.confirmar-pedido {
+  margin-top: 2.3rem;
+  margin-bottom: 3.9rem;
+}
+
+footer {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-footer h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.ultimos-pedidos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.fundo-pedido {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 2rem;
+  width: 200px;
+  height: 236px;
+}
+
+.fundo-pedido img {
+  max-height: 18rem;
+}
+
+.fundo-pedido h3 {
+  padding-top: 1rem;
+}
+
+.lado-direito {
+  background-color: #404eed;
+  width: 50%;
+}
