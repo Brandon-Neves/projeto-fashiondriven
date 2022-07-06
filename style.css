@@ -228,3 +228,9 @@ footer {
   background-color: #404eed;
   cursor: pointer;
 }
+
+.tecido-escolhido,
+.gola-escolhida,
+.modelo-escolhido {
+  display: none;
+}

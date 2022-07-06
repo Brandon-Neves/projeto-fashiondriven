@@ -1,4 +1,4 @@
-let nomeUsuario
+let nomeUsuario = String(prompt('Digite o seu nome'))
 let escolherModelo
 let escolherGola
 let escolherTecido
@@ -13,7 +13,6 @@ function modeloEscolhido(modelo) {
   modelo.classList.add('selecionado')
   escolherModelo =
     modelo.parentNode.querySelector('.modelo-escolhido').innerHTML
-  console.log(escolherModelo)
   habilitarBotao()
 }
 
@@ -24,7 +23,6 @@ function golaEscolhida(gola) {
   }
   gola.classList.add('selecionado')
   escolherGola = gola.parentNode.querySelector('.gola-escolhida').innerHTML
-  console.log(escolherGola)
   habilitarBotao()
 }
 
@@ -36,12 +34,11 @@ function tecidoEscolhido(tecido) {
   tecido.classList.add('selecionado')
   escolherTecido =
     tecido.parentNode.querySelector('.tecido-escolhido').innerHTML
-  console.log(escolherTecido)
   habilitarBotao()
 }
 
 function urlImagemReferencia() {
-  urlImagem = document.querySelector('.imagem-referencia input').value
+  urlImagem = String(document.querySelector('.imagem-referencia input').value)
   habilitarBotao()
 }
 
@@ -54,6 +51,30 @@ function habilitarBotao() {
   ) {
     document.querySelector(
       '.confirmar-pedido'
-    ).innerHTML = `<button class="ativado">Confirmar pedido</button>`
+    ).innerHTML = `<button class="ativado" onclick="confirmarPedido()">Confirmar pedido</button>`
   }
+}
+
+function confirmarPedido() {
+  let promise = axios.post(
+    'https://mock-api.driven.com.br/api/v4/shirts-api/shirts',
+    {
+      model: escolherModelo,
+      neck: escolherGola,
+      material: escolherTecido,
+      image: urlImagem,
+      owner: nomeUsuario,
+      author: nomeUsuario
+    }
+  )
+  promise.then(encomendaCriada)
+  promise.catch(erroNaEncomenda)
+}
+
+function encomendaCriada() {
+  alert('Sua encomenda foi realizada com sucesso')
+}
+
+function erroNaEncomenda() {
+  alert('Houve um erro ao finalizar seu pedido, tente novamente')
 }
