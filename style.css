@@ -93,7 +93,7 @@ strong {
   font-size: 1.4rem;
 }
 
-.lado-esquerdo button {
+button {
   width: 398px;
   background-color: #c4c4c4;
   font-size: 2rem;
@@ -215,7 +215,16 @@ footer {
   .lado-esquerdo input {
     width: 94%;
   }
-  .lado-esquerdo button {
+  button {
     width: 100%;
   }
+}
+
+.selecionado {
+  border: 3.5px solid #404eed;
+}
+
+.ativado {
+  background-color: #404eed;
+  cursor: pointer;
 }
